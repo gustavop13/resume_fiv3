@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import F0ur from './components/F0ur.vue'
+import Fiv3 from './components/Fiv5.vue'
 
 export default {
   name: 'App',
   components: {
-    F0ur
+    Fiv3
   }
 }
 </script>
