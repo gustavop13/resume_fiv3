@@ -1,39 +1,41 @@
 <template>
   <div id="app">
-    <F0ur/>
+    <First/>
   </div>
 </template>
 
 <script>
-import Fiv3 from './components/Fiv5.vue'
+import First from './components/First.vue'
 
 export default {
   name: 'App',
   components: {
-    Fiv3
+    First
   }
 }
 </script>
 
-//13223f
-//b60025
-//cdd7ac
+//f6006a red
+//00e5fe cyan
+//f9f200 yellow
+//c100cd purple
+//00f197 green
 <style>
 
 body, html {
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: #13223f;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #b60025;
-  margin-top: 60px;
-  font-size: 32pt;
+  height: 100%;
+  width: 100%;
 }
 </style>
