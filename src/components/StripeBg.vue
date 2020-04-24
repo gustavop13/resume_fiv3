@@ -36,10 +36,10 @@
     mounted: function() {
       gsap.from(".stripe", {
         right: '1500px',
-        duration: 1,
+        duration: 5,
         delay: 1,
         stagger: 0.2,
-        ease: 'power3.out'
+        ease: 'elastic'
       });
       gsap.from("#henlo", {
         opacity: 0,
@@ -51,6 +51,10 @@
 </script>
 
 <style>
+  #stripeBg {
+    display: flex;
+    align-items: center;
+  }
   #henlo {
     position: absolute;
     width: 50%;

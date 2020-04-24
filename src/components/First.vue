@@ -1,10 +1,12 @@
 <template>
-  <section id="layout1">
+  <section id="home">
+    <Nav/>
     <StripeBg id='graphic1'/>
   </section>
 </template>
 
 <script>
+import Nav from './Nav.vue'
 import StripeBg from './StripeBg.vue'
 
 export default {
@@ -13,6 +15,7 @@ export default {
     msg: String
   },
   components: {
+    Nav,
     StripeBg
   }
 }
@@ -20,16 +23,15 @@ export default {
 
 <style scoped>
 
-#layout1 {
+#home {
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 #graphic1 {
   position: absolute;
   height: 350px;
   width: 100%;
+  overflow: hidden;
 }
 
 </style>

@@ -2,24 +2,24 @@
   <div id="app">
     <First/>
     <Second/>
-    <!-- <Third/>
-    <Fourth/> -->
+    <Third/>
+    <Fourth/>
   </div>
 </template>
 
 <script>
 import First from './components/First.vue'
 import Second from './components/Second.vue'
-// import Third from './components/Third.vue'
-// import Fourth from './components/Fourth.vue'
+import Third from './components/Third.vue'
+import Fourth from './components/Fourth.vue'
 
 export default {
   name: 'App',
   components: {
     First,
     Second,
-    // Third,
-    // Fourth
+    Third,
+    Fourth
   }
 }
 </script>
