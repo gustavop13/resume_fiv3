@@ -1,25 +1,28 @@
 <template>
   <div id="app">
     <First/>
+    <Second/>
+    <!-- <Third/>
+    <Fourth/> -->
   </div>
 </template>
 
 <script>
 import First from './components/First.vue'
+import Second from './components/Second.vue'
+// import Third from './components/Third.vue'
+// import Fourth from './components/Fourth.vue'
 
 export default {
   name: 'App',
   components: {
-    First
+    First,
+    Second,
+    // Third,
+    // Fourth
   }
 }
 </script>
-
-//f6006a red
-//00e5fe cyan
-//f9f200 yellow
-//c100cd purple
-//00f197 green
 <style>
 
 body, html {
@@ -27,11 +30,6 @@ body, html {
   margin: 0;
   width: 100%;
   height: 100%;
-}
-
-body {
-  display: grid;
-  grid-template-columns: auto;
 }
 
 #app {

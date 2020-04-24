@@ -1,14 +1,12 @@
 <template>
-  <div id="Top">
-    Hi! I'm Gustavo Placencia.
-    I'm a full-stack web developer.
-    <StripeBg/>
-  </div>
+  <section id="layout1">
+    <StripeBg id='graphic1'/>
+  </section>
 </template>
 
 <script>
-
 import StripeBg from './StripeBg.vue'
+
 export default {
   name: 'First',
   props: {
@@ -22,11 +20,16 @@ export default {
 
 <style scoped>
 
-#Top {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 32pt;
-  font-weight: bold;
-  display: block;
-  width: 624px;
+#layout1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
+
+#graphic1 {
+  position: absolute;
+  height: 350px;
+  width: 100%;
+}
+
 </style>

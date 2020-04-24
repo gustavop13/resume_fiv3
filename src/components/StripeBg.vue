@@ -1,27 +1,94 @@
 <template>
-  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1247 625">
-    <title>s-land</title>
-    <rect id="red" x="798" width="449" height="125" style="fill:#f6006a"/>
-    <rect x="638" y="125" width="609" height="125" style="fill:#00e5fe"/>
-    <rect x="448" y="250" width="799" height="125" style="fill:#f9f200"/>
-    <rect x="272" y="375" width="975" height="125" style="fill:#c100cd"/>
-    <rect y="500" width="1247" height="125" style="fill:#00f197"/>
-  </svg>
+  <div id='stripeBg'>
+    <Greeting id='henlo'/>
+    <div class='white'>
+      <div class='stripe' id='red'>
+      </div>
+    </div>
+    <div class='white'>
+      <div class='stripe' id='cyan'>
+      </div>
+    </div>
+    <div class='white'>
+      <div class='stripe' id='yellow'>
+      </div>
+    </div>
+    <div class='white'>
+      <div class='stripe' id='purple'>
+      </div>
+    </div>
+    <div class='white'>
+      <div class='stripe' id='green'>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+  import gsap from 'gsap';
+  import Greeting from './Greeting.vue'
+
   export default {
-    name: 'StripeBg'
+    name: 'StripeBg',
+    components: {
+      Greeting
+    },
+    mounted: function() {
+      gsap.from(".stripe", {
+        right: '1500px',
+        duration: 1,
+        delay: 1,
+        stagger: 0.2,
+        ease: 'power3.out'
+      });
+      gsap.from("#henlo", {
+        opacity: 0,
+        duration: 2,
+        delay: 2
+      });
+    }
   }
 </script>
 
 <style>
-  #red {
-    x: calc(x);
-    transition: x 1.2s;
-    -webkit-transition: x 1.2s;
+  #henlo {
+    position: absolute;
+    width: 50%;
+    margin: auto;
+    z-index: -1;
+    padding: 70px 0px;
   }
-  #red:hover {
-    x: calc(width-);
+  .white {
+    height: 20%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .stripe {
+    height: 20%;
+    position: absolute;
+    right: 0;
+    width: 500px;
+  }
+
+  #red {
+    background-color: #f6006a;
+    width: 25%;
+  }
+  #cyan {
+    background-color: #00e5fe;
+    width: 30%;
+  }
+  #yellow {
+    background-color: #f9f200;
+    width: 35%;
+  }
+  #purple {
+    background-color: #c100cd;
+    width: 40%;
+  }
+  #green {
+    background-color: #00f197;
+    width: 50%;
   }
 </style>
