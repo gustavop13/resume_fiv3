@@ -59,6 +59,7 @@ export default {
   text-align: center;
   display: flex;
   align-items: center;
+  overflow: auto;
 }
 
 #nav {

@@ -32,6 +32,10 @@ body, html {
   height: 100%;
 }
 
+html {
+  overflow: auto;
+}
+
 #app {
   height: 100%;
   width: 100%;
