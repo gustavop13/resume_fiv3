@@ -1,18 +1,18 @@
 <template>
-  <section id="about">
+  <section id="about" v-on:scroll='handleScroll'>
     <div id='container'>
-      <div id='int' v-on:click='anim'>
-        <svg class='star' id="cyanStar" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.11 354.85"><title>Untitled-1</title><polygon points="186.56 0 250.55 108.08 373.11 135.54 290.1 229.8 301.85 354.85 186.56 305.02 71.26 354.85 83.02 229.8 0 135.54 122.56 108.08 186.56 0"/></svg>
-        <svg class='star' id="yellowStar" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.11 354.85"><title>Untitled-1</title><polygon points="186.56 0 250.55 108.08 373.11 135.54 290.1 229.8 301.85 354.85 186.56 305.02 71.26 354.85 83.02 229.8 0 135.54 122.56 108.08 186.56 0"/></svg>
-        <svg class='star' id="purpleStar" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.11 354.85"><title>Untitled-1</title><polygon points="186.56 0 250.55 108.08 373.11 135.54 290.1 229.8 301.85 354.85 186.56 305.02 71.26 354.85 83.02 229.8 0 135.54 122.56 108.08 186.56 0"/></svg>
-        <svg class='star' id="greenStar" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.11 354.85"><title>Untitled-1</title><polygon points="186.56 0 250.55 108.08 373.11 135.54 290.1 229.8 301.85 354.85 186.56 305.02 71.26 354.85 83.02 229.8 0 135.54 122.56 108.08 186.56 0"/></svg>
-        <svg id="redStar" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.11 354.85"><title>Untitled-1</title><polygon points="186.56 0 250.55 108.08 373.11 135.54 290.1 229.8 301.85 354.85 186.56 305.02 71.26 354.85 83.02 229.8 0 135.54 122.56 108.08 186.56 0"/></svg>
-      </div>
       <div id='desc'>
-        I'm a graduate of the University of Arizona,
-        where I majored in Information Science and
-        minored in Astronomy. I tend to work on projects
-        that require a variety of skills.
+        <div id='content'>
+          I'm a graduate of the University of Arizona,
+          where I majored in Information Science and
+          minored in Astronomy. I tend to work on projects
+          that require a variety of skills.
+        </div>
+      </div>
+      <div id='icons'>
+        <Star id='starCont'/>
+        <Heart id='heartCont'/>
+        <Smile id='smileCont'/>
       </div>
     </div>
   </section>
@@ -21,30 +21,63 @@
 <script>
 
 import gsap from 'gsap';
+import Star from './Star.vue';
+import Heart from './Heart.vue';
+import Smile from './Smile.vue';
 
 export default {
   name: 'Second',
   props: {
-    msg: String
+    msg: String,
+  },
+  components: {
+    Star,
+    Heart,
+    Smile
+  },
+  data() {
+    return {
+      displayed: false,
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+    this.displayed = false;
   },
   methods: {
-    anim: function() {
-      gsap.fromTo('.star', {
-        x: 0,
-        y: 0
-      }, {
-        x: function() {return gsap.utils.random(-250, 250)},
-        y: function() {return gsap.utils.random(-250, 250)},
-        duration: 0.4,
-        stagger: 0.05
-      });
-      gsap.fromTo('.star', {
-        opacity: 1
-      }, {
-        opacity: 0,
-        duration: 0.4,
-        ease: 'power2.in'
-      });
+    handleScroll: function() {
+      if(window.scrollY > window.innerHeight * 0.8 & !this.displayed) {
+        gsap.fromTo('#starCont', {
+          x: '200px',
+        }, {
+          x: '0px',
+          opacity: 1,
+          duration: 2,
+        });
+        gsap.fromTo('#heartCont', {
+          x: '200px',
+        }, {
+          x: '0px',
+          opacity: 1,
+          duration: 2,
+        });
+        gsap.fromTo('#smileCont', {
+          x: '200px',
+        }, {
+          x: '0px',
+          opacity: 1,
+          duration: 2,
+        });
+        gsap.fromTo('#desc', {
+          x: '-200px',
+          opacity: 0
+        }, {
+          x: 0,
+          opacity: 1,
+          duration: 2,
+        });
+        this.displayed = true;
+      }
     }
   }
 }
@@ -57,37 +90,58 @@ export default {
     height: 100%;
     display: flex;
     align-items: center;
+    overflow: hidden;
   }
 
   #container{
-    width: 80%;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
   }
 
   #desc {
-    width: 20em;
+    width: 50%;
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+  }
+
+  #content {
     font-family: 'Montserrat', sans-serif;
     font-size: 20pt;
     font-weight: bold;
+    width: 15em;
     margin: auto;
+  }
+
+  #icons {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 5em;
+  }
+
+  #heartCont {
+    width: 33%;
+    height: 50%;
     text-align: center;
+    opacity: 0
   }
 
-  svg {
-    width: 200px;
-    position: absolute;
-    left: 500px;
-    cursor: pointer;
+  #starCont {
+    width: 33%;
+    height: 50%;
+    text-align: center;
+    opacity: 0
   }
 
-  .star {
-    opacity: 1;
+  #smileCont {
+    width: 33%;
+    height: 50%;
+    text-align: center;
+    opacity: 0
   }
-
-  #redStar {fill: red}
-  #cyanStar {fill: cyan}
-  #yellowStar {fill: yellow}
-  #purpleStar {fill: purple}
-  #greenStar {fill: green}
-
 
 </style>
