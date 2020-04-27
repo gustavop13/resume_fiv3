@@ -1,6 +1,8 @@
 <template>
   <div>
-    <svg v-on:click='anim()' id="redHeart" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241.47 225.87"><title>Untitled-2</title><path d="M225.16,122.66,161.29,193c-.93,1-35.33,38.2-36.26,37.18L29.16,123.68C-37,50.2,59.29-39.36,125.92,31.5a2.19,2.19,0,0,0,3.25,0C197.48-41.32,293,47.27,225.16,122.66Z" transform="translate(-6.95 -4.36)"/></svg>
+    <div id='heartBox'>
+      <svg v-on:click='anim()' id="redHeart" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241.47 225.87"><path d="M225.16,124.66,161.29,195c-.93,1-35.33,38.2-36.26,37.18L29.16,125.68C-37,52.2,59.29-37.36,125.92,33.5a2.19,2.19,0,0,0,3.25,0C197.48-39.32,293,49.27,225.16,124.66Z" transform="translate(-6.95 -6.36)"/></svg>
+    </div>
   </div>
 </template>
 
@@ -9,27 +11,30 @@
 import gsap from 'gsap';
 
 export default {
-  name: 'Heart',
+  name: 'heart',
   props: {
     msg: String,
   },
   mounted: function() {
     gsap.fromTo('#redHeart', {
-      rotation: -30,
+      rotation: -20,
     }, {
-      rotation: 30,
+      rotation: 20,
       duration: 3,
       repeat: -1,
       yoyo: true,
       ease: 'none'}
     );
-    let parent = document.getElementById('heartCont');
+    let parent = document.getElementById('heartBox');
     for(let i = 0; i < 7; i++) {
       let heartClone = document.getElementById('redHeart').cloneNode(true);
       heartClone.setAttribute('class', 'heart');
+      heartClone.setAttribute('id', 'idk');
       heartClone.style.zIndex = -i-1;
-      heartClone.style.width = '25%';
+      heartClone.style.width = '3em';
       heartClone.style.opacity = 0;
+      heartClone.style.position = 'absolute';
+      heartClone.style.left = parent.getBoundingClientRect().left + parent.clientWidth/2;
       parent.appendChild(heartClone);
     }
   },
@@ -60,22 +65,15 @@ export default {
 <style scoped>
 
   svg {
-    width: 80%;
-    height: 80%;
     cursor: pointer;
-    margin: auto;
   }
 
-  #redHeart {fill: #f6006a}
+  #redHeart {
+    fill: #f6006a;
+  }
 
   #redHeart:hover {
     fill: #c100cd;
-  }
-
-  .heart {
-    position: absolute;
-    left: 25%;
-    margin-right: -100px;
   }
 
 </style>

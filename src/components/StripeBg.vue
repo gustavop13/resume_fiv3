@@ -75,24 +75,64 @@
     width: 500px;
   }
 
+  .white:hover #red {
+    width: 35%;
+    transition: width 1s;
+     -webkit-transition: width 1s;
+  }
+
+  .white:hover #cyan {
+    width: 40%;
+    transition: width 1s;
+     -webkit-transition: width 1s;
+  }
+
+  .white:hover #yellow {
+    width: 45%;
+    transition: width 1s;
+     -webkit-transition: width 1s;
+  }
+
+  .white:hover #purple {
+    width: 30%;
+    transition: width 1s;
+     -webkit-transition: width 1s;
+  }
+
+  .white:hover #green {
+    width: 45%;
+    transition: width 1s;
+     -webkit-transition: width 1s;
+  }
+
   #red {
     background-color: #f6006a;
     width: 25%;
+    transition: width 1s;
+    -webkit-transition: width 1s;
   }
   #cyan {
     background-color: #00e5fe;
     width: 30%;
+    transition: width 1s;
+    -webkit-transition: width 1s;
   }
   #yellow {
     background-color: #f9f200;
     width: 35%;
+    transition: width 1s;
+    -webkit-transition: width 1s;
   }
   #purple {
     background-color: #c100cd;
     width: 40%;
+    transition: width 1s;
+    -webkit-transition: width 1s;
   }
   #green {
     background-color: #00f197;
     width: 50%;
+    transition: width 1s;
+    -webkit-transition: width 1s;
   }
 </style>

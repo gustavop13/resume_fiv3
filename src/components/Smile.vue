@@ -1,6 +1,8 @@
 <template>
   <div>
-    <svg v-on:click='anim()' id="redSmile" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 277.05 252.99"><path d="M280,126.62c0,187.21-260,187.21-260,0v.14c0-10.25,260-10.25,260,0ZM42.32,19.93,15.1,67.08A11.78,11.78,0,0,0,25.3,84.76H79.75A11.79,11.79,0,0,0,90,67.08L62.73,19.93A11.79,11.79,0,0,0,42.32,19.93Zm199,0L214.1,67.08a11.78,11.78,0,0,0,10.2,17.68h54.45A11.79,11.79,0,0,0,289,67.08L261.73,19.93A11.79,11.79,0,0,0,241.32,19.93Z" transform="translate(-13.5 -14.04)"/></svg>
+    <div id='smileBox'>
+      <svg v-on:click='anim()' id="redSmile" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241.47 225.87"><path d="M238.6,108C238.6,271.11,12,271.11,12,108v.11c0-8.92,226.57-8.92,226.57,0ZM30.17,17.26,9.07,53.81a11.78,11.78,0,0,0,10.2,17.67h42.2A11.78,11.78,0,0,0,71.68,53.81L50.58,17.26A11.79,11.79,0,0,0,30.17,17.26Zm173.42,0-21.1,36.55a11.78,11.78,0,0,0,10.2,17.67h42.2a11.78,11.78,0,0,0,10.2-17.67L224,17.26A11.79,11.79,0,0,0,203.59,17.26Z" transform="translate(-7.47 -11.37)"/></svg>
+    </div>
   </div>
 </template>
 
@@ -15,27 +17,30 @@ export default {
   },
   mounted: function() {
     gsap.fromTo('#redSmile', {
-      rotation: -30,
+      rotation: -20,
     }, {
-      rotation: 30,
+      rotation: 20,
       duration: 3,
       repeat: -1,
       yoyo: true,
       ease: 'none'}
     );
-    let parent = document.getElementById('smileCont');
+    let parent = document.getElementById('smileBox');
     for(let i = 0; i < 7; i++) {
-      let smileClone = document.getElementById('redSmile').cloneNode(true);
-      smileClone.setAttribute('class', 'smile');
-      smileClone.style.zIndex = -i-1;
-      smileClone.style.width = '25%';
-      smileClone.style.opacity = 0;
-      parent.appendChild(smileClone);
+      let SmileClone = document.getElementById('redSmile').cloneNode(true);
+      SmileClone.setAttribute('class', 'Smile');
+      SmileClone.setAttribute('id', 'idk');
+      SmileClone.style.zIndex = -i-1;
+      SmileClone.style.opacity = 0;
+      SmileClone.style.width = '3em';
+      SmileClone.style.position = 'absolute';
+      SmileClone.style.left = parent.getBoundingClientRect().left + parent.clientWidth/2;
+      parent.appendChild(SmileClone);
     }
   },
   methods: {
     anim: function() {
-      gsap.fromTo('.smile', {
+      gsap.fromTo('.Smile', {
         fill: function() {return gsap.utils.random(['#f6006a', '#00e5fe', '#f9f200', '#c100cd', '#00f197'])},
         x: 0,
         y: 0
@@ -44,7 +49,7 @@ export default {
         y: function() {return gsap.utils.random(-150, 150)},
         duration: 0.4,
       });
-      gsap.fromTo('.smile', {
+      gsap.fromTo('.Smile', {
         opacity: 1
       }, {
         opacity: 0,
@@ -60,9 +65,6 @@ export default {
 <style scoped>
 
   svg {
-    width: 80%;
-    height: 80%;
-    margin: auto;
     cursor: pointer;
   }
 
@@ -72,12 +74,6 @@ export default {
 
   #redSmile:hover {
     fill: #00f197;
-  }
-
-  .smile {
-    position: absolute;
-    left: 25%;
-    margin-right: -100px;
   }
 
 </style>
