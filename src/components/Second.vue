@@ -119,6 +119,7 @@ export default {
     overflow: hidden;
     display: inline-block;
     opacity: 1;
+    margin-top: 0;
   }
 
   .item {

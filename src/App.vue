@@ -20,7 +20,7 @@ export default {
     Second,
     Third,
     Fourth
-  }
+  },
 }
 </script>
 <style>

@@ -28,7 +28,7 @@ export default {
     let parent = document.getElementById('smileBox');
     for(let i = 0; i < 7; i++) {
       let SmileClone = document.getElementById('redSmile').cloneNode(true);
-      SmileClone.setAttribute('class', 'Smile');
+      SmileClone.setAttribute('class', 'smile');
       SmileClone.setAttribute('id', 'idk');
       SmileClone.style.zIndex = -i-1;
       SmileClone.style.opacity = 0;
@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     anim: function() {
-      gsap.fromTo('.Smile', {
+      gsap.fromTo('.smile', {
         fill: function() {return gsap.utils.random(['#f6006a', '#00e5fe', '#f9f200', '#c100cd', '#00f197'])},
         x: 0,
         y: 0
@@ -49,7 +49,7 @@ export default {
         y: function() {return gsap.utils.random(-150, 150)},
         duration: 0.4,
       });
-      gsap.fromTo('.Smile', {
+      gsap.fromTo('.smile', {
         opacity: 1
       }, {
         opacity: 0,
