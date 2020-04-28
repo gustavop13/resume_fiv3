@@ -40,7 +40,7 @@
 
 <script>
 
-//import gsap from 'gsap';
+import gsap from 'gsap';
 import Star from './Star.vue';
 import Heart from './Heart.vue';
 import Smile from './Smile.vue';
@@ -67,12 +67,11 @@ export default {
   methods: {
     handleScroll: function() {
       if(window.scrollY > window.innerHeight * 0.8 & !this.displayed) {
-        // gsap.from('.column', {
-        //   opacity: 0,
-        //   x: '200px',
-        //   duration: 2,
-        //   stagger: 0.2
-        // });
+        gsap.to('.item', {
+          opacity: 1,
+          duration: 2,
+          stagger: 0.5
+        });
         this.displayed = true;
       }
     }
@@ -118,7 +117,6 @@ export default {
     margin: 0;
     overflow: hidden;
     display: inline-block;
-    opacity: 1;
     margin-top: 0;
   }
 
@@ -126,6 +124,7 @@ export default {
     height: 80%;
     width: 100%;
     text-align: center;
+    opacity: 0;
   }
 
   #content {

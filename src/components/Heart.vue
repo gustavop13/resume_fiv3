@@ -45,8 +45,8 @@ export default {
         x: 0,
         y: 0
       }, {
-        x: function() {return gsap.utils.random(-150, 150)},
-        y: function() {return gsap.utils.random(-150, 150)},
+        x: function() {return gsap.utils.random(-120, 120)},
+        y: function() {return gsap.utils.random(-120, 120)},
         duration: 0.4,
       });
       gsap.fromTo('.heart', {
