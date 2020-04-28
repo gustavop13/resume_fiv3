@@ -35,7 +35,7 @@
     },
     mounted: function() {
       gsap.from(".stripe", {
-        right: '1500px',
+        right: window.innerWidth,
         duration: 5,
         delay: 1,
         stagger: 0.2,

@@ -115,6 +115,7 @@ h2 {
 .proj {
   width: 12em;
   height: 12em;
+  border-radius: 8%;
   margin: 0;
   background-color: #f6006a;
 }

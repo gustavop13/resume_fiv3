@@ -117,7 +117,6 @@ export default {
     margin: 0;
     overflow: hidden;
     display: inline-block;
-    margin-top: 0;
   }
 
   .item {

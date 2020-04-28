@@ -21,8 +21,18 @@ export default {
 
 <style scoped>
 
+  #smileBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
   #redSmile {
     fill: #f9f200;
+    width: 80%;
+    height: 80%;
+    margin: auto;
   }
 
 </style>
