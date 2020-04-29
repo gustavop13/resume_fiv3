@@ -69,6 +69,8 @@ export default {
     background-color: black;
     position: absolute;
     opacity: 0;
+    transition: opacity 0.6s;
+    -webkit-transition: opacity 0.6s;
   }
 
   .title {
@@ -111,6 +113,8 @@ export default {
 
   .textBox:hover {
     opacity: 0.9;
+    -webkit-transition: opaity 0.6s;
+    transition: opacity 0.6s;
   }
 
   .codeLink:hover {
