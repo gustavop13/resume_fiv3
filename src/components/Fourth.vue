@@ -66,6 +66,9 @@ export default {
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border: 3px solid #00f197;
+    border-radius: 3px;
   }
 
   .column {

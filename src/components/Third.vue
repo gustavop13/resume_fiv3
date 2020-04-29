@@ -15,9 +15,9 @@
     <div id='projectContainer'>
       <div id='projectWrapper'>
         <div id='cent'>
-          <Proj class='proj' iconName='ghost' startTitle="Haunter's Call"/>
-          <Proj class='proj' iconName='dumbbell' startTitle="Ardufit"/>
-          <Proj class='proj' iconName='die' startTitle="HRNG"/>
+          <Proj class='proj' iconName='ghost' startLink='https://github.com/gustavop13/Haunter' startTitle="Haunter's Call" startDesc="Digital narrative with call and text functionality made in Processing."/>
+          <Proj class='proj' iconName='dumbbell' startLink='https://github.com/gustavop13/Ardufit' startTitle="Ardufit" startDesc="Resistance-centered fitness tracking web-service."/>
+          <Proj class='proj' iconName='die' startLink='https://github.com/gustavop13/movie_night' startTitle="HRNG" startDesc="Hardware Random Number Generator with web API."/>
         </div>
       </div>
     </div>

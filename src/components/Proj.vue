@@ -8,6 +8,7 @@
         </div>
         <div class='text'>
           {{desc}}
+          <a :href='link' target="_blank" class='codeLink'>View</a>
         </div>
       </div>
     </div>
@@ -24,13 +25,15 @@ export default {
     msg: String,
     iconName: String,
     startTitle: String,
-    startDesc: String
+    startDesc: String,
+    startLink: String
   },
   data: function() {
     return {
       title: this.startTitle,
       desc: this.startDesc,
       source: require('../assets/' + this.iconName + '.svg'),
+      link: this.startLink
     }
   },
   mounted: function() {
@@ -82,16 +85,37 @@ export default {
   }
 
   .text {
-    width: 5em;
+    width: 10em;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
-    font-size: 12pt;
+    font-size: 14pt;
     color: white;
     text-align: center;
   }
 
+  .codeLink {
+    width: 5em;
+    display: block;
+    margin: auto;
+    margin-top: 0.5em;
+    border-radius: 1.5em;
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 3px solid white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
   .textBox:hover {
     opacity: 0.9;
+  }
+
+  .codeLink:hover {
+    background-color: white;
+    color: black;
   }
 
 </style>
