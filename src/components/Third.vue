@@ -15,9 +15,9 @@
     <div id='projectContainer'>
       <div id='projectWrapper'>
         <div id='cent'>
-          <Proj class='proj'/>
-          <Proj class='proj'/>
-          <Proj class='proj'/>
+          <Proj class='proj' iconName='ghost'/>
+          <Proj class='proj' iconName='dumbbell'/>
+          <Proj class='proj' iconName='dumbbell'/>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@ export default {
 h2 {
   width: 6em;
   margin: auto;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-family: 'Montserrat', sans-serif;
   font-size: 40pt;
   font-weight: bold;
@@ -115,9 +115,8 @@ h2 {
 .proj {
   width: 12em;
   height: 12em;
-  border-radius: 8%;
   margin: 0;
-  background-color: #f6006a;
+  background-color: white;
 }
 
 </style>

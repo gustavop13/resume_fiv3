@@ -58,11 +58,14 @@ export default {
   }
 
   h3 {
+    height: 4em;
     width: 10em;
     margin: auto;
     font-size: 28pt;
     font-weight: bold;
     text-align: center;
+    display: flex;
+    align-items: center;
   }
 
   .column {
