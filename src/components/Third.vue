@@ -15,9 +15,9 @@
     <div id='projectContainer'>
       <div id='projectWrapper'>
         <div id='cent'>
-          <Proj class='proj' iconName='ghost'/>
-          <Proj class='proj' iconName='dumbbell'/>
-          <Proj class='proj' iconName='die'/>
+          <Proj class='proj' iconName='ghost' startTitle="Haunter's Call"/>
+          <Proj class='proj' iconName='dumbbell' startTitle="Ardufit"/>
+          <Proj class='proj' iconName='die' startTitle="HRNG"/>
         </div>
       </div>
     </div>
