@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class='iconBox'>
-      <img id='icon' :src='source'/>
+      <img class='icon' :src='source'/>
     </div>
   </div>
 </template>
@@ -23,8 +23,9 @@ export default {
   },
   mounted: function() {
     let boxes = document.getElementsByClassName('iconBox');
-    boxes.forEach((ele) => {
-      ele.style.backgroundColor = 'red';
+    let colors = ['#f6006a', '#c100cd', '#00f197', '#f9f200', '#00e5fe'];
+    boxes.forEach((ele, idx) => {
+      ele.style.backgroundColor = colors[idx];
     });
   }
 }
@@ -40,9 +41,9 @@ export default {
     align-items: center;
   }
 
-  #icon {
-    width: 80%;
-    height: 80%;
+  .icon {
+    width: 70%;
+    height: 70%;
     margin: auto;
   }
 

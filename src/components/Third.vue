@@ -17,7 +17,7 @@
         <div id='cent'>
           <Proj class='proj' iconName='ghost'/>
           <Proj class='proj' iconName='dumbbell'/>
-          <Proj class='proj' iconName='dumbbell'/>
+          <Proj class='proj' iconName='die'/>
         </div>
       </div>
     </div>
@@ -113,8 +113,8 @@ h2 {
 }
 
 .proj {
-  width: 12em;
-  height: 12em;
+  width: 14em;
+  height: 14em;
   margin: 0;
   background-color: white;
 }
