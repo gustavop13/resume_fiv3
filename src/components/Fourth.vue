@@ -3,16 +3,19 @@
     <div id='header'>
       <h2>Find Out More</h2>
     </div>
-    <a href='mailto:gustavop@email.arizona.edu' id='emailButton'>Email Me</a>
-    <div class='iconLink'>
-      <a href='https://www.linkedin.com/in/gustavo-placencia-carranza/' target='_blank'>
-        <img src='../assets/LI.png'/>
-      </a>
-    </div>
-    <div class='iconLink'>
-      <a href='https://github.com/gustavop13' target='_blank'>
-        <img src='../assets/gHub.png'/>
-      </a>
+    <div id='links'>
+      <a href='mailto:gustavop@email.arizona.edu' id='emailButton'>Email Me</a>
+      <div class='iconLink'>
+        <a href='https://www.linkedin.com/in/gustavo-placencia-carranza/' target='_blank'>
+          <img src='../assets/LI.png'/>
+        </a>
+      </div>
+      <div class='iconLink'>
+        <a href='https://github.com/gustavop13' target='_blank'>
+          <img src='../assets/gHub.png'/>
+        </a>
+      </div>
+      <Twinkle/>
     </div>
     <ConcentricH/>
     <ConcentricS/>
@@ -24,6 +27,7 @@
 //import gsap from 'gsap';
 import ConcentricH from './ConcentricH.vue';
 import ConcentricS from './ConcentricS.vue';
+import Twinkle from './Twinkle.vue';
 
 export default {
   name: 'Fourth',
@@ -32,7 +36,8 @@ export default {
   },
   components: {
     ConcentricH,
-    ConcentricS
+    ConcentricS,
+    Twinkle
   },
 }
 
@@ -61,6 +66,13 @@ export default {
     margin: auto;
     font-size: 40pt;
     font-weight: bold;
+  }
+
+  #links {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    background-color: white;
   }
 
   .iconLink {
