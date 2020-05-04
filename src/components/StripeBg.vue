@@ -59,7 +59,7 @@
     position: absolute;
     width: 50%;
     margin: auto;
-    z-index: -1;
+    z-index: 1;
     padding: 70px 0px;
   }
   .white {

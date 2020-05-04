@@ -86,9 +86,10 @@ export default {
 
   #about {
     height: fit-content;
-    min-height: 70%;
+    min-height: 100%;
     display: block;
     margin: 0;
+    padding-top: 3em;
   }
 
   #header {
@@ -110,7 +111,7 @@ export default {
 
   #container {
     width: 100%;
-    min-height: 30em;
+    min-height: 100%;
     margin: auto;
     text-align: center;
     display: flex;
@@ -121,7 +122,7 @@ export default {
 
   .column {
     width: 20em;
-    height: 70%;
+    height: 100%;
     margin: 2em;
     display: inline-block;
     overflow: visible;

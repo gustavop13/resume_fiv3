@@ -40,8 +40,8 @@ export default {
 <style scoped>
 
 #container {
-  width: fit-content;
-  height: fit-content;
+  width: 30%;
+  height: 30%;
   text-align: center;
   position: absolute;
   top: 0;
