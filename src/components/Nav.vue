@@ -23,21 +23,21 @@ export default {
   },
   methods: {
     scrollTo: function(event) {
-      let mult = 1;
+      let elId = "about";
       if(event.target.id === 'aboutButton') {
-        mult = 1;
+        elId = "about";
       } else if(event.target.id === 'projectsButton') {
-        mult = 2;
+        elId = "projects";
       } else if(event.target.id === 'contactButton') {
-        mult = 3;
+        elId = "contact";
       }
       gsap.to(document.body, {
-        scrollTop: mult * window.innerHeight,
+        scrollTop: document.getElementById(elId).getBoundingClientRect().top,
         duration: 1,
         ease: 'power1.out'
       });
       gsap.to(document.documentElement, {
-        scrollTop: mult * window.innerHeight,
+        scrollTop: document.getElementById(elId).getBoundingClientRect().top,
         duration: 1,
         ease: 'power1.out'
       });
