@@ -25,6 +25,8 @@ export default {
 
 #home {
   height: 100%;
+  position: relative;
+  display: block;
 }
 
 #graphic1 {

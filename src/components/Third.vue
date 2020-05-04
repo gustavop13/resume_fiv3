@@ -43,14 +43,19 @@ export default {
 
 #projects {
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin: 0;
 }
 
 #textContainer {
   margin: 0;
   text-align: center;
-  width: 50%;
+  width: 30em;
   height: 100%;
   display: inline-block;
   overflow: hidden;
@@ -81,6 +86,7 @@ export default {
 h2 {
   width: 6em;
   margin: auto;
+  margin-top: 2em;
   margin-bottom: 0.5em;
   font-family: 'Montserrat', sans-serif;
   font-size: 40pt;
@@ -92,6 +98,8 @@ h2 {
   font-size: 16pt;
   width: 15em;
   margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em; 
 }
 
 #projectWrapper {

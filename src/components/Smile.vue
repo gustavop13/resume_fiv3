@@ -34,7 +34,7 @@ export default {
       SmileClone.style.opacity = 0;
       SmileClone.style.width = '3em';
       SmileClone.style.position = 'absolute';
-      SmileClone.style.left = parent.getBoundingClientRect().left + parent.clientWidth/2;
+      SmileClone.style.left = 0;
       parent.appendChild(SmileClone);
     }
   },
@@ -66,6 +66,10 @@ export default {
 
   svg {
     cursor: pointer;
+  }
+
+  #smileBox {
+    position: relative;
   }
 
   #redSmile {

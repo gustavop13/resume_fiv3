@@ -34,7 +34,7 @@ export default {
       heartClone.style.width = '3em';
       heartClone.style.opacity = 0;
       heartClone.style.position = 'absolute';
-      heartClone.style.left = parent.getBoundingClientRect().left + parent.clientWidth/2;
+      heartClone.style.left = 0;
       parent.appendChild(heartClone);
     }
   },
@@ -68,6 +68,10 @@ export default {
     cursor: pointer;
   }
 
+  #heartBox {
+    position: relative;
+  }
+  
   #redHeart {
     fill: #f6006a;
   }

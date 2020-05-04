@@ -53,12 +53,12 @@ export default {
   margin: auto;
   text-align: center;
   position: absolute;
-  bottom: -20em;
-  right: -20em;
+  bottom: -10em;
+  right: -10em;
 }
 
 svg {
-  width: 40em;
+  width: 20em;
   fill: #f9f200;
 }
 

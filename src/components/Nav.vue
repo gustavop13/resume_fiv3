@@ -1,10 +1,8 @@
 <template>
-  <div id='container'>
-    <div id='nav'>
-      <h3 class='s' id='aboutButton' v-on:click='scrollTo'>About</h3>
-      <h3 class='s' id='projectsButton' v-on:click='scrollTo'>Projects</h3>
-      <h3 class='s' id='contactButton' v-on:click='scrollTo'>Contact</h3>
-    </div>
+  <div id='nav'>
+    <h3 class='s' id='aboutButton' v-on:click='scrollTo'>About</h3>
+    <h3 class='s' id='projectsButton' v-on:click='scrollTo'>Projects</h3>
+    <h3 class='s' id='contactButton' v-on:click='scrollTo'>Contact</h3>
   </div>
 </template>
 
@@ -50,29 +48,22 @@ export default {
 
 <style scoped>
 
-#container {
+#nav {
   width: 100%;
-  height: 33%;
+  height: 10em;
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 14pt;
   font-weight: bold;
-  text-align: center;
   display: flex;
   align-items: center;
-  overflow: auto;
-}
-
-#nav {
-  width: fit-content;
-  margin: auto;
-  margin-bottom: 80px;
-  display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 h3 {
-  margin: -20px;
-  width: 200px;
+  width: 5em;
+  text-align: center;
   cursor: pointer;
   transition: color 1s;
 }

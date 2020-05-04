@@ -34,7 +34,7 @@ export default {
       starClone.style.opacity = 0;
       starClone.style.width = '3em';
       starClone.style.position = 'absolute';
-      starClone.style.left = parent.getBoundingClientRect().left + parent.clientWidth/2;
+      starClone.style.left = 0;
       parent.appendChild(starClone);
     }
   },
@@ -66,6 +66,10 @@ export default {
 
   svg {
     cursor: pointer;
+  }
+
+  #starBox {
+    position: relative;
   }
 
   #redStar {

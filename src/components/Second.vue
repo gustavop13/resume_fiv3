@@ -3,36 +3,38 @@
     <div id='header'>
       <h2>About Me =D</h2>
     </div>
-    <div class='column'>
-      <div class='item'>
-        <div id='content'>
-          I'm a graduate of the University of Arizona,
-          where I majored in Information Science and
-          minored in Astronomy. I tend to work on projects
-          that require a large variety of skills.
+    <div id='container'>
+      <div class='column'>
+        <div class='item'>
+          <div id='content'>
+            I'm a graduate of the University of Arizona,
+            where I majored in Information Science and
+            minored in Astronomy. I tend to work on projects
+            that require a large variety of skills.
+          </div>
+          <Star id='starCont' class='icon'/>
         </div>
-        <Star id='starCont' class='icon'/>
       </div>
-    </div>
-    <div class='column'>
-      <div class='item'>
-        <div id='content'>
-          I'm always trying to develop new skills. These days
-          I mostly focus on web development and trying out
-          different libraries and frameworks.
+      <div class='column'>
+        <div class='item'>
+          <div id='content'>
+            I'm always trying to develop new skills. These days
+            I mostly focus on web development and trying out
+            different libraries and frameworks.
+          </div>
+          <Heart id='heartCont' class='icon'/>
         </div>
-        <Heart id='heartCont' class='icon'/>
       </div>
-    </div>
-    <div class='column'>
-      <div class='item'>
-        <div id='content'>
-          I am as well rounded a person as you'll ever meet and
-          I like to make that apparent through my projects. If
-          you'd like to ask about any of them be sure to send me
-          an e-mail. I'm always happy to talk about them.
+      <div class='column'>
+        <div class='item'>
+          <div id='content'>
+            I am as well rounded a person as you'll ever meet and
+            I like to make that apparent through my projects. If
+            you'd like to ask about any of them be sure to send me
+            an e-mail. I'm always happy to talk about them.
+          </div>
+          <Smile id='smileCont' class='icon'/>
         </div>
-        <Smile id='smileCont' class='icon'/>
       </div>
     </div>
   </section>
@@ -83,15 +85,17 @@ export default {
 <style scoped>
 
   #about {
-    height: 100%;
-    overflow: hidden;
+    height: fit-content;
+    min-height: 70%;
     display: block;
     margin: 0;
   }
 
   #header {
     width: 100%;
-    height: 30%;
+    height: 40%;
+    margin-top: 3em;
+    margin-bottom: 3em;
     display: flex;
     align-items: center;
     text-align: center;
@@ -104,19 +108,23 @@ export default {
     font-weight: bold;
   }
 
-  #container{
+  #container {
     width: 100%;
-    height: 40%;
+    min-height: 30em;
+    margin: auto;
+    text-align: center;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .column {
-    width: 33%;
+    width: 20em;
     height: 70%;
-    margin: 0;
-    overflow: hidden;
+    margin: 2em;
     display: inline-block;
+    overflow: visible;
   }
 
   .item {
@@ -124,6 +132,7 @@ export default {
     width: 100%;
     text-align: center;
     opacity: 0;
+    overflow: visible;
   }
 
   #content {
@@ -140,6 +149,7 @@ export default {
     opacity: 1;
     margin: auto;
     margin-top: 3em;
+    overflow: visible;
   }
 
 </style>
