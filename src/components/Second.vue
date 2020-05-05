@@ -74,6 +74,12 @@ export default {
           duration: 2,
           stagger: 0.5
         });
+        gsap.from('.item', {
+          y: '5em',
+          duration: 1,
+          stagger: 0.5,
+          ease: 'none'
+        })
         this.displayed = true;
       }
     }

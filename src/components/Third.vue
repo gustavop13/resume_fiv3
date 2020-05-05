@@ -15,9 +15,10 @@
     <div id='projectContainer'>
       <div id='projectWrapper'>
         <div id='cent'>
-          <Proj class='proj' iconName='ghost' startLink='https://github.com/gustavop13/Haunter' startTitle="Haunter's Call" startDesc="Digital narrative with call and text functionality made in Processing."/>
-          <Proj class='proj' iconName='dumbbell' startLink='https://github.com/gustavop13/Ardufit' startTitle="Ardufit" startDesc="Resistance-centered fitness tracking web-service."/>
-          <Proj class='proj' iconName='die' startLink='https://github.com/gustavop13/movie_night' startTitle="HRNG" startDesc="Hardware Random Number Generator with web API."/>
+          <Proj class='proj' iconName='ghost' startLink='https://github.com/gustavop13/Haunter' startTitle="Haunter's Call" startDesc="Digital narrative with call and text functionality made in Processing"/>
+          <Proj class='proj' iconName='dumbbell' startLink='https://github.com/gustavop13/Ardufit' startTitle="Ardufit" startDesc="Resistance-centered fitness tracking web-service"/>
+          <Proj class='proj' iconName='die' startLink='https://github.com/gustavop13/movie_night' startTitle="HRNG" startDesc="Hardware Random Number Generator with web API"/>
+          <Proj class='proj' iconName='note' startLink='http://gustavop.com/noise' startTitle="Orange Noise" startDesc="Song visualizer collection"/>
         </div>
       </div>
     </div>
@@ -99,7 +100,7 @@ h2 {
   width: 15em;
   margin: auto;
   margin-top: 3em;
-  margin-bottom: 3em; 
+  margin-bottom: 3em;
 }
 
 #projectWrapper {
