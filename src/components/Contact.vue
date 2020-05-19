@@ -3,8 +3,18 @@
     <div id='header'>
       <h2>Find Out More</h2>
     </div>
+    <div class='cForm'>
+      <form action="/sendMesssage" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email">
+        <label for="mes">Message</label>
+        <textarea type="text" id="mes" name="message"></textarea>
+        <input type="submit" value="Submit" id='send'>
+      </form>
+    </div>
     <div id='links'>
-      <a href='mailto:gustavop@email.arizona.edu' id='emailButton'>Email Me</a>
       <div class='iconLink'>
         <a href='https://www.linkedin.com/in/gustavo-placencia-carranza/' target='_blank'>
           <img src='../assets/LI.png'/>
@@ -15,7 +25,6 @@
           <img src='../assets/gHub.png'/>
         </a>
       </div>
-      <Twinkle/>
     </div>
     <ConcentricH/>
     <ConcentricS/>
@@ -27,7 +36,7 @@
 //import gsap from 'gsap';
 import ConcentricH from './ConcentricH.vue';
 import ConcentricS from './ConcentricS.vue';
-import Twinkle from './Twinkle.vue';
+//import Twinkle from './Twinkle.vue';
 
 export default {
   name: 'Contact',
@@ -36,8 +45,7 @@ export default {
   },
   components: {
     ConcentricH,
-    ConcentricS,
-    Twinkle
+    ConcentricS
   },
 }
 
@@ -56,7 +64,7 @@ export default {
 
   #header {
     width: 100%;
-    height: 30%;
+    height: 15%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -69,16 +77,20 @@ export default {
   }
 
   #links {
-    width: fit-content;
-    margin: auto;
+    width: 100%;
+    height: 6em;
+    margin-top: 1em;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
   }
 
   .iconLink {
-    width: 100%;
+    width: fit-content;
     text-align: center;
-    margin-top: 3em;
+    margin: 2em 3em;
   }
 
   img {
@@ -105,6 +117,76 @@ export default {
   #emailButton:hover {
     background-color: black;
     color: #00f197;
+  }
+
+  .cForm {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    width: 70vh;
+    margin: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    width: 80%;
+    margin: auto;
+    font-size: 18pt;
+    margin-top: 0.6em;
+    font-weight: bold;
+  }
+
+  input, textarea {
+    width: 80%;
+    margin: auto;
+    height: 3em;
+    font-size: 12pt;
+    padding-left: 8px;
+    margin-top: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid black;
+  }
+
+  input:focus {
+    border-color: black black #00e5fe black;
+    border-bottom-width: 4px;
+  }
+
+  input:hover {
+    cursor: text;
+  }
+
+  #mes {
+    height: 6em;
+    padding-top: 10px;
+  }
+
+  #mes:focus {
+    border-color: black black #00e5fe black;
+    border-bottom-width: 4px;
+  }
+
+  #send {
+    width: 83%;
+    height: 2em;
+    margin-top: 1em;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    background-color: #f6006a;
+    border: none;
+    font-size: 18pt;
+  }
+
+  #send:hover {
+    background-color: #30384b;
   }
 
 </style>
