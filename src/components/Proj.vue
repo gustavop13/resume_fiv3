@@ -8,7 +8,12 @@
         </div>
         <div class='text'>
           {{desc}}
-          <a :href='link' target="_blank" class='codeLink'>View</a>
+          <a :href='link' target="_blank" class='codeLink' v-if="live">
+            View Site
+          </a>
+          <a :href='link' target="_blank" class='codeLink' v-else>
+            View Code
+          </a>
         </div>
       </div>
     </div>
@@ -26,19 +31,21 @@ export default {
     iconName: String,
     startTitle: String,
     startDesc: String,
-    startLink: String
+    startLink: String,
+    liveSite: Boolean
   },
   data: function() {
     return {
       title: this.startTitle,
       desc: this.startDesc,
       source: require('../assets/' + this.iconName + '.svg'),
-      link: this.startLink
+      link: this.startLink,
+      live: this.liveSite
     }
   },
   mounted: function() {
     let boxes = document.getElementsByClassName('iconBox');
-    let colors = ['#f6006a', '#c100cd', '#00f197', '#f9f200', '#00e5fe'];
+    let colors = ['#00f197', '#c100cd', '#f9f200', '#f6006a', '#00e5fe', '#00f197'];
     boxes.forEach((ele, idx) => {
       ele.style.backgroundColor = colors[idx];
     });
@@ -96,13 +103,16 @@ export default {
   }
 
   .codeLink {
-    width: 5em;
-    display: block;
+    width: 7em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     margin-top: 0.5em;
     border-radius: 1.5em;
     text-align: center;
-    font-size: 16pt;
+    font-size: 12pt;
     font-weight: bold;
     color: white;
     background-color: black;
