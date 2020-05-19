@@ -4,7 +4,7 @@
       <h2>Find Out More</h2>
     </div>
     <div class='cForm'>
-      <form action="sendMesssage" method="post">
+      <form action="/sendMesssage" method="POST">
         <label for="name">Name</label>
         <input type="text" id="name" name="name">
         <label for="email">Email Address</label>
