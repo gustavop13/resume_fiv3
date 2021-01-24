@@ -8,7 +8,7 @@
         <div id='cent'>
           <Proj class='proj' iconName='note' startLink='http://gustavop.com/noise' startTitle="Orange Noise" startDesc="Song visualizer collection" v-bind:liveSite="true"/>
           <Proj class='proj' iconName='three' startLink='http://gustavop.com/3' startTitle="resume_three" startDesc="Old resume site showcasing three.js" v-bind:liveSite="true"/>
-          <Proj class='proj' iconName='tv' startLink='https://github.com/gustavop13/movie_night' startTitle="Movie Night" startDesc="A helpful tool to simplify the process of choosing a movie" v-bind:liveSite="false"/>
+          <Proj class='proj' iconName='tv' startLink='https://movienight.space' startTitle="Movie Night" startDesc="A helpful tool to simplify the process of choosing a movie" v-bind:liveSite="true"/>
           <Proj class='proj' iconName='ghost' startLink='https://github.com/gustavop13/Haunter' startTitle="Haunter's Call" startDesc="Digital narrative with call and text functionality made in Processing"/>
           <Proj class='proj' iconName='dumbbell' startLink='https://github.com/gustavop13/Ardufit' startTitle="Ardufit" startDesc="Resistance-centered fitness tracking web-service"/>
           <Proj class='proj' iconName='die' startLink='https://github.com/gustavop13/movie_night' startTitle="HRNG" startDesc="Hardware Random Number Generator with web API"/>
